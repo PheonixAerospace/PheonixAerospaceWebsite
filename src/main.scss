@@ -1,0 +1,39 @@
+$primary: rgb(255, 89, 89);
+$headings-font-family:        "Inconsolata";
+$headings-color:              rgb(73, 73, 73);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+html{
+  width:100%;
+  height:100%;
+}
+
+body {
+    width:100%;
+    height:100%;
+    background: linear-gradient(-45deg, black, rgb(32, 20, 20), #250e0e, rgb(59, 1, 1));
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+.header{
+    background: linear-gradient(-45deg, rgb(71, 32, 32), rgb(61, 20, 20), #3a0909, rgb(85, 1, 1));
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.test {
+  background-color: white;
+}

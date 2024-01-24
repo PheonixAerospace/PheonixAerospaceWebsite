@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pheonix Aerospace</title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <script src="app.js"></script>
+
+    <!-- DESKTOP VIEW HEADER -->
+    <div class="container-fluid header lighter_than_background for_desktop sticky-top">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <img src="./public/memorial_uni_logo.png" style="width: 100px;">
+            </div>
+            <div class="col-auto">
+                <img src="./public/pheonix_aerospace_plane.jpg" style="width: 200px; border-radius: 50%;">
+            </div>
+            <div class="col">
+                <!-- This creates a gap between the images and buttons in the header -->
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary">Home</button>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary">Current Project</button>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary">Meet the Team!</button>
+            </div>
+        </div>
+    </div>
+    <!-- MOBILE VIEW HEADER -->
+    <div class="container-fluid header lighter_than_background for_mobile sticky-top">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <div class="row"> 
+                    <img src="./public/memorial_uni_logo.png" style="width: 75px;">
+                </div>
+                <div class="row">
+                    <img src="./public/pheonix_aerospace_plane.jpg" style="width: 75px; border-radius: 50%;">
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group d-flex" role="group" aria-label="Basic example">
+                    <button class="btn btn-primary border border-secondary"  type="button">Home</button>
+                    <button class="btn btn-primary border border-secondary"  type="button">Current Project</button>
+                    <button class="btn btn-primary border border-secondary"  type="button">Meet the Team!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4">
+        <p class="h1 ps-5 display-2">
+            Pheonix Aerospace
+        </p>
+        <p class="h1 ps-5" style="color: rgb(160, 160, 160);">
+            Students Working Together to Build a New Legacy
+        </p>
+        <div class="row">
+            <div class="col xl-7">
+                <img src="./public/pheonix_team_photo.jpg" class="img-fluid ps-5 pe-5 rounded">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col card m-5" style="background-color: rgb(71, 41, 41);">
+                <div class="card-body">
+                    <p class="h1 px-5 pt-5 pb-3 display-2">
+                        Our Story
+                    </p>
+                    <p class="h3 ps-5" style="color: rgb(160, 160, 160);">
+                        Phoenix Aerospace is a new engineering design team at the Memorial Univeristy of Newfoundland (MUN), 
+                        established in January 2022. It is the only design team at MUN that works in the Aerospace field.
+                        <br>
+                        <br>
+                        <br> 
+                        We want to create more than just a club to fly RC planes. Beyond that, our goal is to create 
+                        a safe space that opens up new opportunities for students to explore concepts from 
+                        Aerospace and improve their problem-solving. We build RC planes with <a class="link" onclick="button_redirect('https://www.aiaa.org/dbf')">
+                        the AIAA DBF competition</a> in mind, hoping to compete against other universities 
+                        in designing a product with a dynamic and exiting set of contraints. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
