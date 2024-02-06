@@ -27,3 +27,27 @@ window.onresize = function(){
   change_header_type();
 };
 
+//Rediret the user to a certain link
+function button_redirect(link){
+  window.open(link, "", "");
+}
+
+
+//TODO: Add more animations
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const slide_in_left = entry.target.querySelector('.slide_in_left_object');
+    console.log(slide_in_left);
+    if (entry.isIntersecting) {
+      slide_in_left.classList.add('slide_in_left');
+	  return; 
+    }
+
+    //Uncomment line below to have object slide in once again after scrolling back
+    //slide_in_left.classList.remove('slide_in_left'); 
+  });
+});
+
+animated_objects = document.querySelectorAll('.animation_wrapper');
+
+animated_objects.forEach((element) => observer.observe(element));

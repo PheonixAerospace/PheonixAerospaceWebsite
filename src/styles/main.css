@@ -1,4 +1,33 @@
 @charset "UTF-8";
+.slide_in_left {
+  -webkit-animation: slide_in_left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide_in_left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide_in_left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide_in_left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -112,10 +141,10 @@
   --bs-border-radius-xxl: 2rem;
   --bs-border-radius-2xl: var(--bs-border-radius-xxl);
   --bs-border-radius-pill: 50rem;
-  --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-  --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  --bs-box-shadow: 0 0.5rem 1rem rgb(255, 255, 255);
+  --bs-box-shadow-sm: 0 0.125rem 0.25rem rgb(255, 255, 255);
+  --bs-box-shadow-lg: 0 1rem 3rem rgb(255, 255, 255);
+  --bs-box-shadow-inset: inset 0 1px 2px rgb(255, 255, 255);
   --bs-focus-ring-width: 0.25rem;
   --bs-focus-ring-opacity: 0.25;
   --bs-focus-ring-color: rgba(255, 89, 89, 0.25);
@@ -11865,7 +11894,7 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(-45deg, black, rgb(32, 20, 20), #250e0e, rgb(59, 1, 1));
-  background-size: 400% 400%;
+  background-size: 400% 500%;
   animation: gradient 10s ease infinite;
 }
 
@@ -11875,17 +11904,14 @@ body {
   animation: gradient 5s ease infinite;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.solid_divider {
+  border-top: 10px solid #bbb;
 }
-.test {
-  background-color: white;
+
+.info_text {
+  color: rgb(255, 255, 255);
+}
+
+.button_row:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=main.css.map */
