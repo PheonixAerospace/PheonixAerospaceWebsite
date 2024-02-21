@@ -1,4 +1,60 @@
 @charset "UTF-8";
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, rgb(20, 20, 20), rgb(22, 13, 13), #110707, rgb(22, 3, 3));
+  background-size: 400% 500%;
+  -webkit-animation: Gradient 10s ease infinite;
+  -moz-animation: Gradient 10s ease infinite;
+  animation: Gradient 10s ease infinite;
+}
+
+.header {
+  background: linear-gradient(-45deg, rgb(71, 32, 32), rgb(61, 20, 20), #3a0909, rgb(85, 1, 1));
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+  animation: Gradient 5s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.slide_in_right {
+  -webkit-animation: slide_in_right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide_in_right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 .slide_in_left {
   -webkit-animation: slide_in_left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide_in_left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -28,6 +84,640 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes slide_in_right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide_in_right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.org-tree .node {
+  width: 140px;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  position: relative;
+}
+.org-tree .item {
+  display: flex;
+  flex-direction: column;
+}
+.org-tree .parent {
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+}
+.org-tree .parent:not(.collapsed):after {
+  content: "";
+  position: absolute;
+  background-color: #aaa;
+  width: 2px;
+  height: 10px;
+  bottom: 0;
+  left: 50%;
+  background-color: #aaa;
+  transform: translateY(100%);
+}
+.org-tree .row .item:first-child > .child::after {
+  left: 50%;
+  width: 50%;
+}
+.org-tree .row .item:last-child > .child::after {
+  width: calc(50% + 2px);
+}
+.org-tree .row .item:only-child > .child::after {
+  width: 0px;
+}
+.org-tree .item > .child:not(.root):before {
+  content: "";
+  position: absolute;
+  background-color: #aaa;
+  left: 50%;
+  top: 0;
+  transform: translateY(-100%);
+  width: 2px;
+  height: 10px;
+}
+.org-tree .item > .child:after {
+  content: "";
+  position: absolute;
+  background-color: #aaa;
+  left: 0;
+  top: -10px;
+  transform: translateY(-100%);
+  height: 2px;
+  width: 100%;
+}
+@media screen and (max-width: 99999px) {
+  .org-tree .child-width-1 .item > .child:before, .org-tree .child-width-1 .item > .child:after {
+    display: none;
+  }
+  .org-tree .child-width-1 .item > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-1 .item > .child .node:not(.root)::after {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 10px;
+    height: 2px;
+    top: 50%;
+    left: calc(50% - 70px - 10px);
+  }
+  .org-tree .child-width-1 .item:last-child:not(:only-child) > .child .node:not(.root):before {
+    height: calc(50% + 2px);
+  }
+  .org-tree .child-width-1 .item:only-child > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(50% + 10px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-1 > .row {
+    margin-left: -50%;
+  }
+  .org-tree .child-width-1 .node {
+    margin-bottom: 20px;
+  }
+  .org-tree .child-width-1 .row {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+  .org-tree .child-width-1 .row .item:first-child:not(:only-child) > .child .node:not(.root)::before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(100% + 30px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-1 .row .item:not(:last-child):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-1 .parent {
+    margin-bottom: 0px;
+    display: block;
+  }
+  .org-tree .child-width-1 .parent:not(.collapsed):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 70px;
+    height: 2px;
+    bottom: -10px;
+    left: calc(50% - 70px);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .org-tree .child-width-1 .item > .child:before, .org-tree .child-width-1 .item > .child:after {
+    display: none;
+  }
+  .org-tree .child-width-1 .item > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-1 .item > .child .node:not(.root)::after {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 10px;
+    height: 2px;
+    top: 50%;
+    left: calc(50% - 70px - 10px);
+  }
+  .org-tree .child-width-1 .item:last-child:not(:only-child) > .child .node:not(.root):before {
+    height: calc(50% + 2px);
+  }
+  .org-tree .child-width-1 .item:only-child > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(50% + 10px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-1 > .row {
+    margin-left: -50%;
+  }
+  .org-tree .child-width-1 .node {
+    margin-bottom: 20px;
+  }
+  .org-tree .child-width-1 .row {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+  .org-tree .child-width-1 .row .item:first-child:not(:only-child) > .child .node:not(.root)::before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(100% + 30px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-1 .row .item:not(:last-child):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-1 .parent {
+    margin-bottom: 0px;
+    display: block;
+  }
+  .org-tree .child-width-1 .parent:not(.collapsed):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 70px;
+    height: 2px;
+    bottom: -10px;
+    left: calc(50% - 70px);
+  }
+  .org-tree .child-width-2 .item > .child:before, .org-tree .child-width-2 .item > .child:after {
+    display: none;
+  }
+  .org-tree .child-width-2 .item > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-2 .item > .child .node:not(.root)::after {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 10px;
+    height: 2px;
+    top: 50%;
+    left: calc(50% - 70px - 10px);
+  }
+  .org-tree .child-width-2 .item:last-child:not(:only-child) > .child .node:not(.root):before {
+    height: calc(50% + 2px);
+  }
+  .org-tree .child-width-2 .item:only-child > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(50% + 10px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-2 > .row {
+    margin-left: -50%;
+  }
+  .org-tree .child-width-2 .node {
+    margin-bottom: 20px;
+  }
+  .org-tree .child-width-2 .row {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+  .org-tree .child-width-2 .row .item:first-child:not(:only-child) > .child .node:not(.root)::before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(100% + 30px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-2 .row .item:not(:last-child):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-2 .parent {
+    margin-bottom: 0px;
+    display: block;
+  }
+  .org-tree .child-width-2 .parent:not(.collapsed):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 70px;
+    height: 2px;
+    bottom: -10px;
+    left: calc(50% - 70px);
+  }
+}
+@media screen and (max-width: 991px) {
+  .org-tree .child-width-1 .item > .child:before, .org-tree .child-width-1 .item > .child:after {
+    display: none;
+  }
+  .org-tree .child-width-1 .item > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-1 .item > .child .node:not(.root)::after {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 10px;
+    height: 2px;
+    top: 50%;
+    left: calc(50% - 70px - 10px);
+  }
+  .org-tree .child-width-1 .item:last-child:not(:only-child) > .child .node:not(.root):before {
+    height: calc(50% + 2px);
+  }
+  .org-tree .child-width-1 .item:only-child > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(50% + 10px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-1 > .row {
+    margin-left: -50%;
+  }
+  .org-tree .child-width-1 .node {
+    margin-bottom: 20px;
+  }
+  .org-tree .child-width-1 .row {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+  .org-tree .child-width-1 .row .item:first-child:not(:only-child) > .child .node:not(.root)::before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(100% + 30px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-1 .row .item:not(:last-child):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-1 .parent {
+    margin-bottom: 0px;
+    display: block;
+  }
+  .org-tree .child-width-1 .parent:not(.collapsed):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 70px;
+    height: 2px;
+    bottom: -10px;
+    left: calc(50% - 70px);
+  }
+  .org-tree .child-width-2 .item > .child:before, .org-tree .child-width-2 .item > .child:after {
+    display: none;
+  }
+  .org-tree .child-width-2 .item > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-2 .item > .child .node:not(.root)::after {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 10px;
+    height: 2px;
+    top: 50%;
+    left: calc(50% - 70px - 10px);
+  }
+  .org-tree .child-width-2 .item:last-child:not(:only-child) > .child .node:not(.root):before {
+    height: calc(50% + 2px);
+  }
+  .org-tree .child-width-2 .item:only-child > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(50% + 10px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-2 > .row {
+    margin-left: -50%;
+  }
+  .org-tree .child-width-2 .node {
+    margin-bottom: 20px;
+  }
+  .org-tree .child-width-2 .row {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+  .org-tree .child-width-2 .row .item:first-child:not(:only-child) > .child .node:not(.root)::before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(100% + 30px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-2 .row .item:not(:last-child):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-2 .parent {
+    margin-bottom: 0px;
+    display: block;
+  }
+  .org-tree .child-width-2 .parent:not(.collapsed):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 70px;
+    height: 2px;
+    bottom: -10px;
+    left: calc(50% - 70px);
+  }
+  .org-tree .child-width-3 .item > .child:before, .org-tree .child-width-3 .item > .child:after {
+    display: none;
+  }
+  .org-tree .child-width-3 .item > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-3 .item > .child .node:not(.root)::after {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 10px;
+    height: 2px;
+    top: 50%;
+    left: calc(50% - 70px - 10px);
+  }
+  .org-tree .child-width-3 .item:last-child:not(:only-child) > .child .node:not(.root):before {
+    height: calc(50% + 2px);
+  }
+  .org-tree .child-width-3 .item:only-child > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(50% + 10px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-3 > .row {
+    margin-left: -50%;
+  }
+  .org-tree .child-width-3 .node {
+    margin-bottom: 20px;
+  }
+  .org-tree .child-width-3 .row {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+  .org-tree .child-width-3 .row .item:first-child:not(:only-child) > .child .node:not(.root)::before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(100% + 30px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-3 .row .item:not(:last-child):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-3 .parent {
+    margin-bottom: 0px;
+    display: block;
+  }
+  .org-tree .child-width-3 .parent:not(.collapsed):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 70px;
+    height: 2px;
+    bottom: -10px;
+    left: calc(50% - 70px);
+  }
+  .org-tree .child-width-4 .item > .child:before, .org-tree .child-width-4 .item > .child:after {
+    display: none;
+  }
+  .org-tree .child-width-4 .item > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-4 .item > .child .node:not(.root)::after {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 10px;
+    height: 2px;
+    top: 50%;
+    left: calc(50% - 70px - 10px);
+  }
+  .org-tree .child-width-4 .item:last-child:not(:only-child) > .child .node:not(.root):before {
+    height: calc(50% + 2px);
+  }
+  .org-tree .child-width-4 .item:only-child > .child .node:not(.root):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(50% + 10px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-4 > .row {
+    margin-left: -50%;
+  }
+  .org-tree .child-width-4 .node {
+    margin-bottom: 20px;
+  }
+  .org-tree .child-width-4 .row {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+  .org-tree .child-width-4 .row .item:first-child:not(:only-child) > .child .node:not(.root)::before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+    height: calc(100% + 30px + 2px);
+    top: -11px;
+  }
+  .org-tree .child-width-4 .row .item:not(:last-child):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 2px;
+    height: calc(100% + 20px + 2px);
+    left: calc(50% - 70px - 10px);
+    top: -1px;
+  }
+  .org-tree .child-width-4 .parent {
+    margin-bottom: 0px;
+    display: block;
+  }
+  .org-tree .child-width-4 .parent:not(.collapsed):before {
+    content: "";
+    position: absolute;
+    background-color: #aaa;
+    width: 70px;
+    height: 2px;
+    bottom: -10px;
+    left: calc(50% - 70px);
+  }
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -11885,23 +12575,19 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@media screen and (min-width: 600px) {
+  .for_mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .for_desktop {
+    display: none;
+  }
+}
 html {
   width: 100%;
   height: 100%;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(-45deg, black, rgb(32, 20, 20), #250e0e, rgb(59, 1, 1));
-  background-size: 400% 500%;
-  animation: gradient 10s ease infinite;
-}
-
-.header {
-  background: linear-gradient(-45deg, rgb(71, 32, 32), rgb(61, 20, 20), #3a0909, rgb(85, 1, 1));
-  background-size: 400% 400%;
-  animation: gradient 5s ease infinite;
 }
 
 .solid_divider {
