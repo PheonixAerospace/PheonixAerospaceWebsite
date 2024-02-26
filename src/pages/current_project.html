@@ -16,26 +16,25 @@
     <div class="container-fluid header lighter_than_background for_desktop sticky-top">
         <div class="row align-items-center">
             <div class="col-auto">
-                <img src="../public/memorial_uni_logo.png" style="width: 100px" />
+                <p class="h3 text-left" style="font-family:fantasy;">Phoenix <br>Aerospace</p>
+            </div>
+            <div class="col"></div>
+            <div class="col-auto">
+                <img src="../public/memorial_uni_logo.png" style="width: 75px" />
             </div>
             <div class="col-auto">
-                <img src="../public/pheonix_aerospace_plane.jpg" style="width: 200px; border-radius: 50%" />
-            </div>
-            <div class="col">
-                <!-- This creates a gap between the images and buttons in the header -->
+                <img src="../public/logo.png" style="width: 80px;" />
             </div>
             <div class="col-auto">
-                <button type="button" onclick="window.location.href='home.html'" class="btn btn-primary">
-                    Home
-                </button>
+                <button type="button" onclick="window.location.href='home.html'" class="btn btn-primary">Home</button>
             </div>
             <div class="col-auto">
-                <button type="button" class="btn btn-primary">Current Project</button>
+                <button type="button" onclick="window.location.href='current_project.html'"
+                    class="btn btn-primary">Current Project</button>
             </div>
             <div class="col-auto">
-                <button type="button" onclick="window.location.href='./meet_the_team.html'" class="btn btn-primary">
-                    Meet the Team!
-                </button>
+                <button type="button" onclick="window.location.href='meet_the_team.html'" class="btn btn-primary">Meet
+                    the Team!</button>
             </div>
         </div>
     </div>
@@ -48,20 +47,21 @@
                     <img src="../public/memorial_uni_logo.png" style="width: 75px" />
                 </div>
                 <div class="row">
-                    <img src="../public/pheonix_aerospace_plane.jpg" style="width: 75px; border-radius: 50%" />
+                    <img src="../public/logo.png" style="width: 75px; border-radius: 50%" />
                 </div>
             </div>
             <div class="col">
                 <div class="btn-group d-flex" role="group" aria-label="Basic example">
-                    <button class="btn btn-primary border border-secondary"
+                    <button class="btn btn-primary border border-secondary" 
                         onclick="window.location.href='home.html'" type="button">
                         Home
                     </button>
-                    <button class="btn btn-primary border border-secondary" type="button">
+                    <button class="btn btn-primary border border-secondary"
+                        onclick="window.location.href='current_project.html'" type="button">
                         Current Project
                     </button>
                     <button class="btn btn-primary border border-secondary"
-                        onclick="window.location.href='./meet_the_team.html'" type="button">
+                        onclick="window.location.href='meet_the_team.html'" type="button">
                         Meet the Team!
                     </button>
                 </div>
@@ -70,18 +70,15 @@
     </div>
     <!----------------->
     <div class="container-fluid py-4">
-        <p class="h1 ps-5 display-2">Current Project</p>
-        <p class="h1 ps-5" style="color: rgb(160, 160, 160)">
-            What we're currently working on!
-        </p>
+        <p class="h1 ps-5 display-2 text-primary">Current Project</p>
         <div class="card-group animation_wrapper justify-content-center">
-            <div class="card slide_in_left_object my-5 mx-3 shadow" style="background-color: rgb(71, 41, 41)">
+            <div class="card slide_in_left_object my-5 mx-3 shadow" style="background-color: rgb(210, 210, 210)">
                     <img src="../public/mystery_plane.jpg" class="card-img-top" style="width: 100%" />
                     <div class="card-body">
-                        <p class="card-title h1 text-center" style="color: beige">
+                        <p class="card-title h1 text-center text-primary">
                             PAX-2
                         </p>
-                        <p class="card-text fs-5" style="color: rgb(160, 160, 160)">
+                        <p class="card-text fs-5" >
                             In preperation for the
                             <a class="link" onclick="button_redirect('https://www.aiaa.org/dbf')">
                                 the AIAA DBF competition</a>, the team will build a competition-worthy plane while
@@ -90,11 +87,11 @@
                         </p>
                     </div>
             </div>
-            <div class="card my-5 mx-3 shadow slide_in_right_object" style="background-color: rgb(71, 41, 41)">
+            <div class="card my-5 mx-3 shadow slide_in_right_object" style="background-color: rgb(210, 210, 210)">
                 <img src="../public/pheonix_aerospace_plane.jpg" class="card-img-top" style="width: 100%" />
                 <div class="card-body">
-                    <p class="card-title h1 text-center" style="color: beige">PAX-1</p>
-                    <p class="card-text fs-5" style="color: rgb(160, 160, 160)">
+                    <p class="card-title h1 text-center text-primary" >PAX-1</p>
+                    <p class="card-text fs-5" >
                         Over the summer of 2023, Phoenix Aerospace built and flew a
                         starter RC plane based of a
                         <a class="link"
@@ -111,7 +108,7 @@
     </div>
     <hr class="solid_divider pb-2" />
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 mt-5 border-top"
-            style="background-color: rgb(139, 82, 82)">
+            style="background-color: rgb(210, 210, 210)">
             <div class="col-md-2 d-flex align-items-center">
                 <p class="mb-3 ps-2 mb-md-0 text-muted">© 2024 Phoenix Aerospace</p>
             </div>

@@ -16,26 +16,25 @@
     <div class="container-fluid header lighter_than_background for_desktop sticky-top">
         <div class="row align-items-center">
             <div class="col-auto">
-                <img src="../public/memorial_uni_logo.png" style="width: 100px" />
+                <p class="h3 text-left" style="font-family:fantasy;">Phoenix <br>Aerospace</p>
+            </div>
+            <div class="col"></div>
+            <div class="col-auto">
+                <img src="../public/memorial_uni_logo.png" style="width: 75px" />
             </div>
             <div class="col-auto">
-                <img src="../public/pheonix_aerospace_plane.jpg" style="width: 200px; border-radius: 50%" />
-            </div>
-            <div class="col">
-                <!-- This creates a gap between the images and buttons in the header -->
+                <img src="../public/logo.png" style="width: 80px;" />
             </div>
             <div class="col-auto">
-                <button type="button" onclick="window.location.href='home.html'" class="btn btn-primary">
-                    Home
-                </button>
+                <button type="button" onclick="window.location.href='home.html'" class="btn btn-primary">Home</button>
             </div>
             <div class="col-auto">
-                <button type="button" onclick="window.location.href='./current_project.html'" class="btn btn-primary">
-                    Current Project
-                </button>
+                <button type="button" onclick="window.location.href='current_project.html'"
+                    class="btn btn-primary">Current Project</button>
             </div>
             <div class="col-auto">
-                <button type="button" class="btn btn-primary">Meet the Team!</button>
+                <button type="button" onclick="window.location.href='meet_the_team.html'" class="btn btn-primary">Meet
+                    the Team!</button>
             </div>
         </div>
     </div>
@@ -48,20 +47,21 @@
                     <img src="../public/memorial_uni_logo.png" style="width: 75px" />
                 </div>
                 <div class="row">
-                    <img src="../public/pheonix_aerospace_plane.jpg" style="width: 75px; border-radius: 50%" />
+                    <img src="../public/logo.png" style="width: 75px; border-radius: 50%" />
                 </div>
             </div>
             <div class="col">
                 <div class="btn-group d-flex" role="group" aria-label="Basic example">
-                    <button class="btn btn-primary border border-secondary"
+                    <button class="btn btn-primary border border-secondary" 
                         onclick="window.location.href='home.html'" type="button">
                         Home
                     </button>
                     <button class="btn btn-primary border border-secondary"
-                        onclick="window.location.href='./current_project.html'" type="button">
+                        onclick="window.location.href='current_project.html'" type="button">
                         Current Project
                     </button>
-                    <button class="btn btn-primary border border-secondary" type="button">
+                    <button class="btn btn-primary border border-secondary"
+                        onclick="window.location.href='meet_the_team.html'" type="button">
                         Meet the Team!
                     </button>
                 </div>
@@ -70,106 +70,97 @@
     </div>
     <!----------------->
     <div class="container-fluid py-4">
-        <p class="h1 ps-5 display-2 text-center">Meet the Team!</p>
+        <p class="h1 ps-5 display-2 text-primary">Meet the Team!</p>
         <div class="container-fluid animation_wrapper">
-            <img src="../public/team_photo_placeholder.png" class="img-fluid slide_in_left_object main_page_image" />
+            <img src="../public/people/sdh_team_photo.jpg"
+                class="img-fluid main_page_image slide_in_left_object rounded" />
+            <!--the main_page_image class is used to add margin to the image when the screen is large, and max out the width when the screen is small-->
         </div>
         <div class="container-fluid text-center">
             <button class="btn btn-primary my-4" type="button" data-bs-toggle="collapse" data-bs-target="#team_2024"
             aria-expanded="false" aria-controls="collapseExample">
-                2024
+                Click to See the 2024 Team
             </button>
         </div>
-        <div class="collapse container-fluid shadow" style="background-color: rgb(71, 41, 41)" id="team_2024">
+        <div class="collapse container-fluid shadow" style="background-color: (210, 210, 210)" id="team_2024">
             <div class="animation_wrapper row row-cols-sm-2 row-cols-lg-3 row-cols-xl-6 justify-content-center">
-                <div class="card slide_in_right_object my-5 mx-sm-3 shadow-sm" style="background-color: rgb(55, 59, 59)">
-                    <img src="../public/brady_gibbons_profile_photo.png" class="card-img-top my-2" style="width: 100%" />
+                <div class="card slide_in_right_object my-5 mx-sm-3 shadow-sm bg-primary">
+                    <img src="../public/people/brady.jpg" class="card-img-top my-2" style="width: 100%" />
                     <div class="card-body">
-                        <p class="card-title fs-4 text-center" style="color: beige;">
+                        <p class="card-title fs-4 text-center" style="color: rgb(220, 245, 242);">
                             Brady Gibbons
                         </p>
-                        <p class="text-center fs-2 text-primary">
+                        <p class="text-center fs-2" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
                             Team Lead
                         </p>
                     </div>
                 </div>
             </div>
             <div class="animation_wrapper row row-cols-sm-2 row-cols-lg-3 row-cols-xl-6 justify-content-center">
-                <div class="card slide_in_left_object col-xs-1 my-5 mx-sm-3 shadow-sm" style="background-color: rgb(55, 59, 59)">
+                <div class="card slide_in_left_object my-5 mx-sm-3 shadow-sm bg-primary">
                     <img src="../public/mystery_profile_photo.png" class="card-img-top my-2" style="width: 100%" />
                     <div class="card-body">
-                        <p class="card-title fs-4 text-center" style="color: beige">
+                        <p class="card-title fs-4 text-center" style="color: rgb(220, 245, 242);">
                             Tahera Chowdhury
                         </p>
-                        <p class="fs-2 text-center text-primary">
+                        <p class="text-center fs-2" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
                             Member
                         </p>
                     </div>
                 </div>
-                <div class="card slide_in_left_object col-xs-1 my-5 mx-sm-3 shadow-sm" style="background-color: rgb(55, 59, 59)">
-                    <img src="../public/mystery_profile_photo.png" class="card-img-top my-2" style="width: 100%" />
+                <div class="card slide_in_left_object my-5 mx-sm-3 shadow-sm bg-primary">
+                    <img src="../public/people/kaitlyn.jpg" class="card-img-top my-2" style="width: 100%" />
                     <div class="card-body">
-                        <p class="card-title fs-4 text-center" style="color: beige">
+                        <p class="card-title fs-4 text-center" style="color: rgb(220, 245, 242);">
                             Kaitlyn Abbott
                         </p>
-                        <p class="fs-2 text-center text-primary">
+                        <p class="text-center fs-2" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
                             Member
                         </p>
                     </div>
                 </div>
-                <div class="card slide_in_left_object col-xs-1 my-5 mx-sm-3 shadow-sm" style="background-color: rgb(55, 59, 59)">
-                    <img src="../public/mystery_profile_photo.png" class="card-img-top my-2" style="width: 100%" />
+                <div class="card slide_in_left_object my-5 mx-sm-3 shadow-sm bg-primary">
+                    <img src="../public/people/anastasis.jpg" class="card-img-top my-2" style="width: 100%" />
                     <div class="card-body">
-                        <p class="card-title fs-4 text-center" style="color: beige">
+                        <p class="card-title fs-4 text-center" style="color: rgb(220, 245, 242);">
                             Anastasis Georgiou
                         </p>
-                        <p class="fs-2 text-center text-primary">
+                        <p class="text-center fs-2" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
                             Member
                         </p>
                     </div>
                 </div>
-                <div class="card slide_in_right_object col-xs-1 my-5 mx-sm-3 shadow-sm" style="background-color: rgb(55, 59, 59)">
-                    <img src="../public/mystery_profile_photo.png" class="card-img-top my-2" style="width: 100%" />
+                <div class="card slide_in_right_object my-5 mx-sm-3 shadow-sm bg-primary">
+                    <img src="../public/people/mohammed.jpg" class="card-img-top my-2" style="width: 100%" />
                     <div class="card-body">
-                        <p class="card-title fs-4 text-center" style="color: beige">
+                        <p class="card-title fs-4 text-center" style="color: rgb(220, 245, 242);">
+                            Mohammed Dia
+                        </p>
+                        <p class="text-center fs-2" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+                            Member
+                        </p>
+                    </div>
+                </div>
+                <div class="card slide_in_right_object my-5 mx-sm-3 shadow-sm bg-primary">
+                    <img src="../public/people/zaid.jpg" class="card-img-top my-2" style="width: 100%" />
+                    <div class="card-body">
+                        <p class="card-title fs-4 text-center" style="color: rgb(220, 245, 242);">
                             Zaid Duraid
                         </p>
-                        <p class="fs-2 text-center text-primary">
-                            Member
-                        </p>
-                    </div>
-                </div>
-                <div class="card slide_in_right_object col-xs-1 my-5 mx-sm-3 shadow-sm" style="background-color: rgb(55, 59, 59)">
-                    <img src="../public/mystery_profile_photo.png" class="card-img-top my-2" style="width: 100%" />
-                    <div class="card-body">
-                        <p class="card-title fs-4 text-center" style="color: beige">
-                            Jesse Lewis
-                        </p>
-                        <p class="fs-2 text-center text-primary">
+                        <p class="text-center fs-2" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
                             Member
                         </p>
                     </div>
                 </div>
             </div>
             <div class="animation_wrapper row row-cols-sm-2 row-cols-lg-3 row-cols-xl-6 justify-content-center">
-                <div class="card slide_in_left_object col-xs-1 my-5 mx-sm-3 shadow-sm" style="background-color: rgb(55, 59, 59)">
+                <div class="card slide_in_right_object my-5 mx-sm-3 shadow-sm bg-primary">
                     <img src="../public/mystery_profile_photo.png" class="card-img-top my-2" style="width: 100%" />
                     <div class="card-body">
-                        <p class="card-title fs-4 text-center" style="color: beige">
-                            Lucy Finn
+                        <p class="card-title fs-4 text-center" style="color: rgb(220, 245, 242);">
+                            Jesse Lewis
                         </p>
-                        <p class="fs-2 text-center text-primary">
-                            Member
-                        </p>
-                    </div>
-                </div>
-                <div class="card slide_in_right_object col-xs-1 my-5 mx-sm-3 shadow-sm" style="background-color: rgb(55, 59, 59)">
-                    <img src="../public/mystery_profile_photo.png" class="card-img-top my-2" style="width: 100%" />
-                    <div class="card-body">
-                        <p class="card-title fs-4 text-center" style="color: beige">
-                            Md. Rakin Kibria
-                        </p>
-                        <p class="fs-2 text-center text-primary">
+                        <p class="text-center fs-2" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
                             Member
                         </p>
                     </div>
@@ -179,7 +170,7 @@
     </div>
     <hr class="solid_divider pb-2" />
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 mt-5 border-top"
-        style="background-color: rgb(139, 82, 82)">
+        style="background-color:  rgb(210, 210, 210)">
         <div class="col-md-2 d-flex align-items-center">
             <p class="mb-3 ps-2 mb-md-0 text-muted">© 2024 Phoenix Aerospace</p>
         </div>

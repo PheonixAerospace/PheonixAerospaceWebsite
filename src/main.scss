@@ -1,9 +1,10 @@
-$primary: rgb(255, 89, 89);
+$primary: rgba(160, 123, 3, 0.959);
+$secondary: #9BB7DF;
 $headings-font-family:        "Impact";
 $font-family-base:            'Lucida Sans';
-$headings-color:              rgb(189, 189, 189);
+$headings-color:              rgb(0, 0, 0);
 
-$box-shadow:                  0 .5rem 1rem rgba(255,255,255,200);
+$box-shadow:                  0 .5rem 1rem  rgba(0,0,0, .75);
 $box-shadow-sm:               0 .125rem .25rem rgba(255,255,255,200);
 $box-shadow-lg:               0 1rem 3rem rgba(255,255,255,200);
 $box-shadow-inset:            inset 0 1px 2px rgba(255,255,255,200);
@@ -13,7 +14,7 @@ $box-shadow-inset:            inset 0 1px 2px rgba(255,255,255,200);
 body {
   width:100%;
   height:100%;
-  background: linear-gradient(-45deg, rgb(20, 20, 20), rgb(22, 13, 13), #110707, rgb(22, 3, 3));
+  background: linear-gradient(-45deg, rgb(210, 210, 210), rgb(230, 230, 230), rgb(190, 190, 190));
   background-size: 400% 500%;
   -webkit-animation: Gradient 10s ease infinite;
   -moz-animation: Gradient 10s ease infinite;
@@ -22,7 +23,7 @@ body {
 }
 
 .header{
-background: linear-gradient(-45deg, rgb(71, 32, 32), rgb(61, 20, 20), #3a0909, rgb(85, 1, 1));
+background: linear-gradient(-45deg, #9BB7DF, rgba(146, 214, 253, 0.2), rgba(75, 185, 248, 0.2));
 background-size: 400% 400%;
 -webkit-animation: Gradient 5s ease infinite;
   -moz-animation: Gradient 5s ease infinite;
@@ -122,13 +123,13 @@ background-size: 400% 400%;
 
   .main_page_image {
     display: block; 
-    width: 80%;
+    width: 70%;
     margin-left: auto; 
     margin-right: auto;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 799px) {
   .for_desktop {
     display: none;
   } 
@@ -146,7 +147,7 @@ html{
 }
 
 .solid_divider {
-    border-top: 10px solid #bbb;
+    border-top: 10px solid #747272;
 }
 
 .info_text {

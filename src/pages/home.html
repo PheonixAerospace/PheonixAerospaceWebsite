@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Phoenix Aerospace</title>
     <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="shortcut icon" type="image/png" href="../public/favicon.png"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="../public/logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,22 +19,25 @@
     <div class="container-fluid header lighter_than_background for_desktop sticky-top">
         <div class="row align-items-center">
             <div class="col-auto">
-                <img src="../public/memorial_uni_logo.png" style="width: 100px" />
+                <p class="h3 text-left" style="font-family:fantasy;">Phoenix <br>Aerospace</p>
+            </div>
+            <div class="col"></div>
+            <div class="col-auto">
+                <img src="../public/memorial_uni_logo.png" style="width: 75px" />
             </div>
             <div class="col-auto">
-                <img src="../public/pheonix_aerospace_plane.jpg" style="width: 200px; border-radius: 50%" />
-            </div>
-            <div class="col">
-                <!-- This creates a gap between the images and buttons in the header -->
+                <img src="../public/logo.png" style="width: 80px;" />
             </div>
             <div class="col-auto">
-                <button type="button" class="btn btn-primary">Home</button>
+                <button type="button" onclick="window.location.href='home.html'" class="btn btn-primary">Home</button>
             </div>
             <div class="col-auto">
-                <button type="button" onclick="window.location.href='current_project.html'" class="btn btn-primary">Current Project</button>
+                <button type="button" onclick="window.location.href='current_project.html'"
+                    class="btn btn-primary">Current Project</button>
             </div>
             <div class="col-auto">
-                <button type="button" onclick="window.location.href='meet_the_team.html'" class="btn btn-primary">Meet the Team!</button>
+                <button type="button" onclick="window.location.href='meet_the_team.html'" class="btn btn-primary">Meet
+                    the Team!</button>
             </div>
         </div>
     </div>
@@ -45,18 +50,21 @@
                     <img src="../public/memorial_uni_logo.png" style="width: 75px" />
                 </div>
                 <div class="row">
-                    <img src="../public/pheonix_aerospace_plane.jpg" style="width: 75px; border-radius: 50%" />
+                    <img src="../public/logo.png" style="width: 75px; border-radius: 50%" />
                 </div>
             </div>
             <div class="col">
                 <div class="btn-group d-flex" role="group" aria-label="Basic example">
-                    <button class="btn btn-primary border border-secondary" type="button">
+                    <button class="btn btn-primary border border-secondary" 
+                        onclick="window.location.href='home.html'" type="button">
                         Home
                     </button>
-                    <button class="btn btn-primary border border-secondary" onclick="window.location.href='current_project.html'" type="button">
+                    <button class="btn btn-primary border border-secondary"
+                        onclick="window.location.href='current_project.html'" type="button">
                         Current Project
                     </button>
-                    <button class="btn btn-primary border border-secondary" onclick="window.location.href='meet_the_team.html'" type="button">
+                    <button class="btn btn-primary border border-secondary"
+                        onclick="window.location.href='meet_the_team.html'" type="button">
                         Meet the Team!
                     </button>
                 </div>
@@ -64,50 +72,66 @@
         </div>
     </div>
     <!----------------->
-    <div class="container-fluid py-4">
-        <p class="h1 ps-5 display-2">Phoenix Aerospace</p>
-        <p class="h1 ps-5" style="color: rgb(160, 160, 160)">
+
+    <!-- DESKTOP MAIN PAGE IMAGE -->
+    <div class="container-fluid animation_wrapper for_desktop mb-5" style="background-color: #9BB7DF; position: relative;">
+        <img src="../public/people/pheonix_team_photo_no_bg.png"
+            class="img-fluid main_page_image slide_in_left_object rounded" />
+        <!--the main_page_image class is used to add padding to the image when the screen is large, and max out the width when the screen is small-->
+        <p class="h1 ps-2 text-primary" style="height: 0; overflow: visible; position: absolute; top: 0px;">
             Students Working Together to Build a New Legacy
         </p>
-            <div class="container-fluid animation_wrapper xl-7">
-                <img src="../public/pheonix_team_photo.jpg" class="img-fluid main_page_image slide_in_left_object rounded" />
-                <!--the main_page_image class is used to add padding to the image when the screen is large, and max out the width when the screen is small-->
+    </div>
+    <!----------------->
+
+    <!-- MOBILE MAIN PAGE IMAGE -->
+    <div class="container-fluid animation_wrapper for_mobile" style="background-color: #9BB7DF; position: relative;">
+        <img src="../public/people/pheonix_team_photo_no_bg.png"
+            class="img-fluid main_page_image slide_in_left_object rounded" />
+        <!--the main_page_image class is used to add margin to the image when the screen is large, and max out the width when the screen is small-->
+    </div>
+    <p class="h1 for_mobile mx-3 mt-4" >
+        Pheonix Aerospace
+    </p>
+    <p class="h3 mx-3 mb-4 for_mobile text-primary" >
+        Students Working Together to Build a New Legacy
+    </p>
+    <!----------------->
+
+    <div class="container-fluid d-flex animation_wrapper  justify-content-center">
+        <div class="card mx-0 mx-lg-5 mb-5 slide_in_right_object shadow" style="background-color: rgb(210, 210, 210)">
+            <div class="card-body">
+                <p class="h1 text-primary px-auto pt-auto pb-auto display-2">Our Story</p>
+                <p class="fs-3 ps-auto pb-auto">
+                    Phoenix Aerospace is a new engineering design team at the Memorial
+                    Univeristy of Newfoundland (MUN), established in January 2022. It
+                    is the only aerospace-oriented engineering design team at MUN!
+                    <br />
+                    <br />
+                    <br />
+                    We want to create more than just a club to fly RC planes. Beyond
+                    that, our goal is to create a safe space that opens up new
+                    opportunities for students to explore concepts from Aerospace and
+                    improve their problem-solving. We build RC planes with
+                    <a class="link" onclick="button_redirect('https://www.aiaa.org/dbf')">
+                        the AIAA DBF competition</a>
+                    in mind, hoping to compete against other universities in designing
+                    a product with a dynamic and exiting set of contraints.
+                </p>
             </div>
-            <div class="container-fluid d-flex animation_wrapper  justify-content-center">
-                <div class="card mx-0 mx-lg-5 my-5  slide_in_right_object shadow" style="background-color: rgb(71, 41, 41)">
-                    <div class="card-body">
-                        <p class="h1 px-auto pt-auto pb-auto display-2">Our Story</p>
-                        <p class="fs-3 ps-auto pb-auto" style="color: rgb(160, 160, 160)">
-                            Phoenix Aerospace is a new engineering design team at the Memorial
-                            Univeristy of Newfoundland (MUN), established in January 2022. It
-                            is the only aerospace-oriented engineering design team at MUN!
-                            <br />
-                            <br />
-                            <br />
-                            We want to create more than just a club to fly RC planes. Beyond
-                            that, our goal is to create a safe space that opens up new
-                            opportunities for students to explore concepts from Aerospace and
-                            improve their problem-solving. We build RC planes with
-                            <a class="link" onclick="button_redirect('https://www.aiaa.org/dbf')">
-                                the AIAA DBF competition</a>
-                            in mind, hoping to compete against other universities in designing
-                            a product with a dynamic and exiting set of contraints.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        <hr class="solid_divider pb-2" />
-        <div class="container-fluid d-flex animation_wrapper justify-content-center">
-            <p class="h1 px-5 pt-5 pb-2 slide_in_left_object display-4 text-center" style="color: white">
-                Contact us!
-            </p>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 justify-content-center g-4 animation_wrapper">
-            <div class="col slide_in_right_object">
-                <div class="card shadow-sm h-100" style="background-color: rgb(71, 41, 41)">
-                    <div class="card-body">
-                        <div class="row button_row">
-                            <h5 class="card-title col h2 text-end" onclick="button_redirect('https://www.linkedin.com/')">LinkedIn</h5>
+    </div>
+    <hr class="solid_divider pb-2" />
+    <div class="row row-cols-1 row-cols-md-3 mt-5 justify-content-center animation_wrapper" style="width: 100%;">
+        <div class="col slide_in_right_object">
+            <div class="card shadow h-100" style="background-color: (210, 210, 210)">
+                <div class="card-body">
+                    <p class="h1 text-primary px-5 pt-2 pb-2 display-4 text-center" style="color: white">
+                        Contact us!
+                    </p>
+                    <!--<div class="row button_row">
+                            <h5 class="card-title col h2 text-end"
+                                onclick="button_redirect('https://www.linkedin.com/')">LinkedIn</h5>
                             <div class="col align-items-start">
                                 <img src="../public/linkedin_img.svg"
                                     style="width: 50px; position: relative; top: -15%" />
@@ -115,7 +139,8 @@
                             <div class="container-fluid" style="height: 50px"></div>
                         </div>
                         <div class="row button_row">
-                            <h5 class="card-title col h2 text-end" onclick="button_redirect('https://www.instagram.com/')">Instagram</h5>
+                            <h5 class="card-title col h2 text-end"
+                                onclick="button_redirect('https://www.instagram.com/')">Instagram</h5>
                             <div class="col align-items-start">
                                 <img src="../public/instagram_image.svg"
                                     style="width: 50px; position: relative; top: -15%" />
@@ -123,60 +148,74 @@
                             <div class="container-fluid" style="height: 50px"></div>
                         </div>
                         <div class="row button_row">
-                            <h5 class="card-title col h2 text-end" onclick="button_redirect('https://www.facebook.com/')">Facebook</h5>
+                            <h5 class="card-title col h2 text-end"
+                                onclick="button_redirect('https://www.facebook.com/')">Facebook</h5>
                             <div class="col align-items-start">
-                                <img src="../public/facebook_image.svg" 
+                                <img src="../public/facebook_image.svg"
                                     style="width: 50px; position: relative; top: -15%" />
                             </div>
                             <div class="container-fluid" style="height: 10px"></div>
+                        </div>-->
+                    <div class="row button_row mt-5">
+                        <h5 class="card-title col h2 text-end" onclick="button_redirect('https://www.instagram.com/')">
+                            Instagram</h5>
+                        <div class="col align-items-start">
+                            <img src="../public/instagram_image.svg"
+                                style="width: 50px; position: relative; top: -15%" />
                         </div>
-                        <hr class="solid_divider" />
-                        <div class="row justify-content-center">
-                            <form>
-                                <input type="hidden">
-                                <!-- For deployment, go to web3forms and obtain and access key to redirect form to Pheonix Aerospace Email -->
-                                <div class="mb-3">
-                                    <label for="Name" class="form-label">Name</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="Email" class="form-label">Email address</label>
-                                    <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="Message" class="form-label">Your Message</label>
-                                    <textarea class="form-control" name="message" rows="3" required></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <button type="submit">Submit Form</button>
-                                </div>
-                            </form>
-                        </div>
+                        <div class="container-fluid" style="height: 50px"></div>
+                    </div>
+                    <hr class="solid_divider" />
+                    <div class="row justify-content-center">
+                        <form>
+                            <input type="hidden">
+                            <!-- For deployment, go to web3forms and obtain and access key to redirect form to Pheonix Aerospace Email -->
+                            <div class="mb-3">
+                                <label for="Name" class="form-label">Name</label>
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Email" class="form-label">Email address</label>
+                                <input type="email" name="email" class="form-control" placeholder="name@example.com"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Message" class="form-label">Your Message</label>
+                                <textarea class="form-control" name="message" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit">Submit Form</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 mt-5 border-top" style="background-color: rgb(139, 82, 82);">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 mt-5 border-top"
+        style="background-color: rgb(210, 210, 210);">
         <div class="col-md-2 d-flex align-items-center">
-          <p class="mb-3 ps-2 mb-md-0 text-muted">© 2024 Phoenix Aerospace</p>
+            <p class="mb-3 ps-2 mb-md-0 text-muted">© 2024 Phoenix Aerospace</p>
         </div>
         <div class="col-auto d-flex align-items-start">
             <div class="btn-group d-flex" role="group" aria-label="Basic example">
                 <button class="btn btn-primary border border-secondary" type="button">
                     Home
                 </button>
-                <button class="btn btn-primary border border-secondary" onclick="window.location.href='current_project.html'" type="button">
+                <button class="btn btn-primary border border-secondary"
+                    onclick="window.location.href='current_project.html'" type="button">
                     Current Project
                 </button>
-                <button class="btn btn-primary border border-secondary" onclick="window.location.href='meet_the_team.html'" type="button">
+                <button class="btn btn-primary border border-secondary"
+                    onclick="window.location.href='meet_the_team.html'" type="button">
                     Meet the Team!
                 </button>
             </div>
         </div>
         <div class="col-md-2 d-flex"></div>
-      </footer>
-    
+    </footer>
+
     <script src="../app.js"></script>
 </body>
+
 </html>
